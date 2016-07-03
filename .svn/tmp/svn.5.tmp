@@ -1,0 +1,179 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
+	
+<div id="wrapper">     
+	<div id="page-wrapper">
+	     <div class="container-fluid">
+			  <h1 class="page-header">회원관리</h1>
+		      <div id="column-right">
+					<a href="#" class="button button-reversed">신규</a> 
+					<a href="#" class="button">엑셀</a> 
+					<a href="#"class="button">인쇄</a>
+			 </div>
+						
+		      
+				
+				 	<div class="input-group">
+					 	<select name="search" id="search" class="msize">
+							<option selected="selected" value="검색조건">검색조건</option>
+							<option value="0">회원번호</option>
+							<option value="1">회원명</option>
+							<option value="2">회원구분</option>
+							<option value="3">소속</option>
+							<option value="4">가입구분</option>
+							<option value="5">핸드폰</option>
+							<option value="6">이메일</option>
+						</select> 
+                        <input type="text" id="search_a" name="search_a">
+						<button type="submit" class="btn btn-small">검색</button>
+                    </div>
+		
+								
+				<table class="table table-bordered table-hover">
+					<thead>
+						<tr>
+							<th>회원번호</th>
+							<th>회원명</th>
+							<th>주민번호</th>
+							<th>회원구분</th>
+							<th>소속</th>
+							<th>가입구분</th>
+							<th>가입일자</th>
+							<th>납입액</th>
+							<th>핸드폰</th>
+							<th>이메일</th>
+							<th>비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>201605-0001</td>
+							<td>김하나</td>
+							<td>830203-2032932</td>
+							<td>직원</td>
+							<td>OO교회</td>
+							<td>개인</td>
+							<td>2016.05.02</td>
+							<td>30,000</td>
+							<td>010-3042-3402</td>
+							<td>sjdki@daum.net</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>201605-0002</td>
+							<td>박둘</td>
+							<td>610601-14323432</td>
+							<td>동문</td>
+							<td></td>
+							<td>기업</td>
+							<td>2016.05.03</td>
+							<td>100,000</td>
+							<td>010-1203-8301</td>
+							<td>shdguq@daum.net</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>201605-0003</td>
+							<td>강셋</td>
+							<td>710601-2918210</td>
+							<td>학부모</td>
+							<td>00교회</td>
+							<td>가족</td>
+							<td>2016.05.06</td>
+							<td>50,000</td>
+							<td>010-2425-5743</td>
+							<td>sjdfj@naver.com</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>201605-0004</td>
+							<td>송넷</td>
+							<td>910601-1202902</td>
+							<td>동문</td>
+							<td></td>
+							<td>개인</td>
+							<td>2016.05.08</td>
+							<td>20,000</td>
+							<td>010-1023-1821</td>
+							<td>giewm@daum.net</td>
+							<td></td>
+						</tr>
+						<tr>
+							<td>201605-0005</td>
+							<td>신다섯</td>
+							<td>730402-2193942</td>
+							<td>기타</td>
+							<td>00교회</td>
+							<td>단체</td>
+							<td>2016.05.12</td>
+							<td>100,000</td>
+							<td>010-2832-1921</td>
+							<td>sjdkfw@daum.net</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>								
+											
+				<!-- Pagination -->
+		        <div class="row text-center">
+		            <div class="col-lg-12">
+		                <ul class="pagination">
+		                    <li>
+		                        <a href="#">&laquo;</a>
+		                    </li>
+		                    <li class="active">
+		                        <a href="#">1</a>
+		                    </li>
+		                    <li>
+		                        <a href="#">2</a>
+		                    </li>
+		                    <li>
+		                        <a href="#">3</a>
+		                    </li>
+		                    <li>
+		                        <a href="#">4</a>
+		                    </li>
+		                    <li>
+		                        <a href="#">5</a>
+		                    </li>
+		                    <li>
+		                        <a href="#">&raquo;</a>
+		                    </li>
+		                </ul>
+		            </div>
+		        </div>
+												
+				<div class="panel panel-default">
+					<div class="panel-body">
+					<!-- Nav tabs -->
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#user" data-toggle="tab">회원관리</a></li>
+							<li><a href="#contract" data-toggle="tab">약정관리</a></li>
+							<li><a href="#payment" data-toggle="tab">납입관리</a></li>
+						</ul>
+										
+						<!-- Tab panes -->
+						 <div class="tab-content">		                            
+								<div class="tab-pane fade in active" id="user">
+									<%@ include file="/WEB-INF/views/home/user.jsp" %>
+								</div>
+								<div class="tab-pane fade" id="contract">
+									<h4>약정관리</h4>
+									<p>Lorem ipsum dolor sit amet, 
+								</div>
+								<div class="tab-pane fade" id="payment">
+									<%@ include file="/WEB-INF/views/home/payment.jsp" %>
+								</div>
+							</div>
+						</div>
+						<!-- /.panel-body -->
+					</div>
+					<!-- /.panel -->
+											
+		</div>
+	</div>
+</div>
+
+

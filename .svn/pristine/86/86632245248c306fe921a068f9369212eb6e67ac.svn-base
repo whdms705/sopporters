@@ -1,0 +1,382 @@
+@charset "UTF-8";
+
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+body {
+	font-family: 'Noto Sans KR';
+	font-size: 14px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+}
+
+/*--navbar--*/
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:focus,
+	.navbar-inverse .navbar-nav>.active>a:hover {
+	color: #fff;
+	background-color: #33364F;
+}
+
+.navbar-inverse {
+	background-color: #252839;
+	border-color: #252839;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+	border-color: #252839;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+	color: #ccc;
+}
+
+.navbar-inverse .navbar-brand {
+	color: #ccc;
+}
+
+/*-- 테이블 -- */
+table {
+	border-top: 3px double #ccc;
+	border-bottom: 3px double #ccc;
+	overflow: auto;
+}
+
+.table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+	overflow: auto;
+	font-size: 10pt;
+}
+
+th, td {
+	padding: 5px 5px;
+}
+
+th {
+	background-color: #f1f1f1;
+	color: #000000;
+}
+
+tr {
+	border-bottom: 1px solid #ddd;
+}
+
+td {
+	border-bottom: 1px solid #ddd;
+}
+
+#table_a {
+	background-color: #f1f1f1;
+	width: 130px;
+	text-align: center;
+}
+
+#table_b {
+	width: 300px;
+}
+
+/*-- 주소 input 크기 변경 -- */
+#address {
+	width: 250px;
+}
+/*-- 주소검색버튼 -- */
+.searcha {
+	display: inline-block;
+	padding: 0 3px;
+	color: #999;
+	font-size: 10pt;
+	line-height: normal;
+	vertical-align: middle;
+	background-color: #fdfdfd;
+	cursor: pointer;
+	border: 1px solid #bbb;
+	border-radius: .25em;
+	margin-bottom: 1px;
+}
+
+/*-- 파일업로드  -- */
+.filebox input[type="file"] {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+.filebox label {
+	display: inline-block;
+	padding: .5em .75em;
+	color: #999;
+	font-size: inherit;
+	line-height: normal;
+	vertical-align: middle;
+	background-color: #fdfdfd;
+	cursor: pointer;
+	border: 1px solid #ebebeb;
+	border-bottom-color: #e2e2e2;
+	border-radius: .25em;
+}
+
+.filebox .upload-name {
+	display: inline-block;
+	padding: .5em .75em; /* label의 패딩값과 일치 */
+	font-size: inherit;
+	font-family: inherit;
+	line-height: normal;
+	vertical-align: middle;
+	background-color: #f5f5f5;
+	border: 1px solid #ebebeb;
+	border-bottom-color: #e2e2e2;
+	border-radius: .25em;
+	-webkit-appearance: none; /* 네이티브 외형 감추기 */
+	-moz-appearance: none;
+	appearance: none;
+}
+/*-- 버튼 --*/
+a.button {
+	background-color: #ddd;
+	border-radius: 5px;
+	color: #222;
+	display: inline-block;
+	font-weight: bold;
+	padding: 8px 22px;
+	font-size: 0.7em;
+	letter-spacing: 0.25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 5px 0 5px 0;
+}
+
+.btn {
+	background-color: #ddd;
+	border-radius: 5px;
+	color: #222;
+	display: inline-block;
+	font-weight: bold;
+	padding: 4px 15px;
+	font-size: 0.7em;
+	letter-spacing: 0.25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin: 5px 0 11px 0;
+	display: inline-block;
+}
+
+a.button-reversed {
+	background-color: #333;
+	color: #FFFFFF;
+}
+
+a.button:hover {
+	background-color: #c2c2c2;
+}
+
+a.button-reversed:hover {
+	background-color: #222;
+	color: #FFFFFF;
+}
+
+a {
+	color: #222;
+}
+
+a:hover {
+	color: #000;
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
+}
+
+/*-- 정렬 --*/
+#column-left {
+	float: left;
+}
+
+#column-right {
+	float: right;
+}
+
+/*-- 검색조건 select박스 -- */
+#search {
+	padding: 1px;
+	margin: 1px;
+}
+/*-- 검색 input -- */
+input#search_a {
+	margin: 2px 2px 2px 5px;
+	padding: 2px;
+	font-size: 1em;
+}
+/*-- panel --*/
+.panel {
+	margin-bottom: 20px;
+	background-color: #fff;
+	border-radius: 4px;
+}
+
+.panel-default {
+	border-color: #fff;
+}
+
+.panel-default>.panel-heading {
+	color: #333;
+	background-color: #fff;
+	border-color: #fff;
+}
+
+/*-- pagination --*/
+.pagination>li>a, .pagination>li>span {
+	position: relative;
+	float: left;
+	padding: 6px 12px;
+	margin-left: -1px;
+	line-height: 1.42857143;
+	color: #222;
+	text-decoration: none;
+	background-color: #fff;
+	border: 1px solid #ddd;
+}
+
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus,
+	.pagination>li>span:hover {
+	z-index: 2;
+	color: #222;
+	background-color: #eee;
+	border-color: #ddd;
+}
+
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover,
+	.pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover
+	{
+	z-index: 3;
+	color: #000;
+	cursor: default;
+	background-color: #dcdcdc;
+	border-color: #dcdcdc;
+}
+
+/*-- modal --*/
+.modala {
+	margin: 5px 5px;
+}
+
+.modalb {
+	border: 1px solid #ddd;
+	width: %;
+	height: 300px;
+}
+/**contract안에 tab*/
+ul.tabs {
+	margin: 0px 0px 0px 0px;
+	padding: 0;
+	float: left;
+	list-style: none;
+	height: 37px;
+	border-bottom: 1px solid #eee;
+	border-left: 1px solid #eee;
+	width: 305px;
+	font-size: 12px;
+}
+
+ul.tabs li {
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	width: 82px;
+	height: 31px;
+	line-height: 31px;
+	border: 1px solid #eee;
+	border-left: none;
+	font-weight: bold;
+	background: #fafafa;
+	overflow: hidden;
+	position: relative;
+}
+
+ul.tabs li.active {
+	background: #FFFFFF;
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.tab_container {
+	border: 1px solid #eee;
+	border-top: none;
+	margin: 0px 10px 0px 0px;
+	padding: 2px 2px 2px 2px;
+	float: left;
+	width: 305px;
+	background: #FFFFFF;
+	height: 300px;
+}
+
+.tab_content {
+	padding: 5px 5px 5px 5px;
+	font-size: 12px;
+	display: none;
+	padding: 2px 2px 2px 2px;
+}
+
+.tab_container .tab_content table {
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.tab_container .tab_content table tr {
+	padding: 5px;
+	list-style: none;
+}
+
+.ipr>div.con {
+	width: 200px;
+	padding: 0px 0px 0px 15px;
+	float: left;
+}
+
+.ipr>table.tb1 {
+	width: 270px;
+	padding: 0px 0px 0px 0px;
+	float: left;
+	font-size: 12px;
+}
+
+.ipr>table.tb3 {
+	width: 270px;
+	padding: 0px 0px 0px 0px;
+	float: right;
+	font-size: 12px;
+}
+
+div.col-lg-13 {
+	padding: 435px 0px 0px 0px;
+}
+
+/*****code_m1***/
+div#column-right {
+	float: right;
+	padding: 0px 0px 0px 150px;
+	margin: 5px;
+}
+
+.table>tbody.select_subject>thead>tr>th {
+	vertical-align: bottom;
+	text-align: center;
+}
+
+.table>thead>tr>th {
+	vertical-align: bottom;
+	text-align: center;
+}
+
+/***권한관리추가 ***/
+#code_a {
+	margin: 5px 0px 5px 0px;
+	padding: 2px;
+	width: 150px;
+}

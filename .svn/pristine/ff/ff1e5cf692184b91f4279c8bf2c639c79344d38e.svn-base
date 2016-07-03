@@ -1,0 +1,32 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+    http://www.springframework.org/schema/security
+    http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+    <http auto-config="true">
+        <intercept-url pattern="/admin/*" access="ROLE_관리자" />
+        <form-login
+            login-page="/home/login.do"
+            login-processing-url="/home/login_processing.do"
+            authentication-failure-url="/home/login.do?error"
+            default-target-url="/home/index.do"
+            username-parameter="loginId"
+            password-parameter="passwd" />
+        <logout
+            logout-url="/home/logout.do"
+            logout-success-url="/home/login.do"
+            invalidate-session="true" />
+    </http>
+
+    <authentication-manager>
+        <authentication-provider ref="myAuthenticationProvider"/>
+    </authentication-manager>
+
+    <beans:bean id="webexpressionHandler"
+      class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler" />
+
+</beans:beans>
+      

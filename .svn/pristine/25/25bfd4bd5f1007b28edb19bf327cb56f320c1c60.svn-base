@@ -1,0 +1,71 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4>EB21 자동이체</h4>
+
+		<div class="row">
+			<div class="col-lg-2 col-lg-offset-10">
+
+				<a href="#" class="button button-reversed">자동이체요청</a>
+
+			</div>
+		</div>
+	</div>
+	<!-- /.panel-heading -->
+
+
+	<div class="panel-body">
+		<table>
+			<tbody>
+				<tr>
+					<td id="table_a">기관코드</td>
+					<td id="table_b"><input type="text"></td>
+					<td id="table_a">은행점코드</td>
+					<td id="table_b"><input type="text"></td>
+				</tr>
+				<tr>
+					<td id="table_a">출금계좌번호</td>
+					<td id="table_b"><input type="text"
+						placeholder="-를 제외하고 입력해주세요."></td>
+					<td id="table_a">출금의뢰금액</td>
+					<td id="table_b"><input type="text"></td>
+				</tr>
+				<tr>
+					<td id="table_a">예금주정보</td>
+					<td id="table_b"><input type="text"
+						placeholder="생년월일 / 사업자등록번호"></td>
+					<td id="table_a">출금결과</td>
+					<td id="table_b"><input type="text"></td>
+				</tr>
+				<tr>
+					<td id="table_a">통장기재내용</td>
+					<td id="table_b"><input type="text"></td>
+					<td id="table_a">자금종류</td>
+					<td id="table_b"><input type="text"></td>
+
+				</tr>
+				<tr>
+					<td id="table_a">납부자번호</td>
+					<td id="table_b"><input type="text"></td>
+					<td id="table_a">이용기관 사용영역</td>
+					<td id="table_b"><input type="text"></td>
+
+				</tr>
+				<tr>
+					<td id="table_a">출금형태</td>
+					<td id="table_b"><input type="text"></td>
+					<td id="table_a">전화번호(핸드폰)</td>
+					<td id="table_b"><input type="tel" placeholder="-는제외하고 작성해주세요"></td>
+				</tr>
+
+			</tbody>
+		</table>
+
+
+
+	</div>
+</div>

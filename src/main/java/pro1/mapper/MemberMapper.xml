@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+             "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pro1.mapper.MemberMapper">
+
+	<select id="selectById" resultType="pro1.dto.Member">
+		SELECT * FROM [Member] WHERE id = #{id}
+	</select>
+
+	<select id="selectByMemberId" resultType="pro1.dto.Member">
+		SELECT * FROM [Member] WHERE memberId = #{memberId}
+	</select>
+
+	<select id="selectAll" resultType="pro1.dto.Member">
+		SELECT *
+		FROM [Member]
+	</select>
+
+	<select id="selectPage" resultType="pro1.dto.Member">
+        <![CDATA[      
+        SELECT *
+        FROM
+            ( SELECT m.*,
+                  CASE #{order}
+                      WHEN 0 THEN ROW_NUMBER() OVER (ORDER BY m.memberId)
+                      WHEN 1 THEN ROW_NUMBER() OVER (ORDER BY m.name)
+                  END 행번호
+              FROM [Member] m 
+              WHERE
+                  (#{srchType} = 0) OR
+                  (#{srchType} = 1 AND CHARINDEX(#{srchText}, memberId) = 1) OR
+                  (#{srchType} = 2 AND CHARINDEX(#{srchText}, name) = 1) OR
+                  (#{srchType} = 3 AND #{srchText} = memberType) OR
+                  (#{srchType} = 4 AND CHARINDEX(#{srchText}, church) = 1) OR
+                  (#{srchType} = 5 AND #{srchText} = joinType) OR
+                  (#{srchType} = 6 AND #{srchText} = phoneNumber) OR
+                  (#{srchType} = 7 AND #{srchText} = email) 
+            ) subquery
+        WHERE 행번호 > (#{currentPage} - 1) * #{pageSize} AND
+              행번호 <= #{currentPage} * #{pageSize}
+        ORDER BY 행번호
+        ]]>
+	</select>
+
+	<select id="selectCount" resultType="int">
+		SELECT COUNT(*)
+		FROM [Member] m
+		WHERE
+			(#{srchType} = 0) OR
+			(#{srchType} = 1 AND CHARINDEX(#{srchText}, memberId) = 1) OR
+			(#{srchType} = 2 AND CHARINDEX(#{srchText}, name) = 1) OR
+			(#{srchType} = 3 AND #{srchText} = memberType) OR
+			(#{srchType} = 4 AND CHARINDEX(#{srchText}, church) = 1) OR
+			(#{srchType} = 5 AND #{srchText} = joinType) OR
+			(#{srchType} = 6 AND #{srchText} = phoneNumber) OR
+			(#{srchType} = 7 AND #{srchText} = email)
+	</select>
+
+	<insert id="insert" useGeneratedKeys="true" keyProperty="id">
+		INSERT [Member] (memberId, name, ssn,memberType,church, joinType, joinDate, payment,phoneNumber,
+		 email,note)
+		VALUES (#{memberId}, #{name},#{ssn},#{memberTyep},#{church},#{joinType},#{joinDate},
+		#{payment},#{phoneNumber}, #{email}, #{note})
+	</insert>
+
+	<update id="update">
+		UPDATE [Member] SET
+		memberId = #{memberId},
+		name = #{name},
+		ssn = #{ssn},
+		memberType = #{memberType},
+		church = #{church},
+		joinType = #{joinType},
+		joinDate = #{joinDate},
+		payment = #{payment},
+		phoneNumber = #{phoneNumber},
+		email = #{email},
+		note = #{note}
+		WHERE id = #{id}
+	</update>
+
+	<delete id="delete">
+		DELETE FROM [Member] WHERE id = #{id}
+	</delete>
+
+</mapper>

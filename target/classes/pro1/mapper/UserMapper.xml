@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+             "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="pro1.mapper.UserMapper">
+
+    <select id="selectById" resultType="pro1.dto.User">
+        SELECT * FROM [User] WHERE id = #{id}
+    </select>
+
+    <select id="selectByLoginId" resultType="pro1.dto.User">
+        SELECT * FROM [User] WHERE loginId = #{loginId}
+    </select>
+
+    <select id="selectAll" resultType="pro1.dto.User">
+        SELECT u.*, d.departmentName
+        FROM [User] u LEFT JOIN department d ON u.departmentId = d.id
+    </select>
+
+    <select id="selectPage" resultType="pro1.dto.User">
+        <![CDATA[
+        SELECT *
+        FROM
+            ( SELECT u.*, d.departmentName,
+                  CASE #{order}
+                      WHEN 0 THEN ROW_NUMBER() OVER (ORDER BY u.id)
+                      WHEN 1 THEN ROW_NUMBER() OVER (ORDER BY u.loginId)
+                      WHEN 2 THEN ROW_NUMBER() OVER (ORDER BY u.name)
+                  END 행번호
+              FROM [User] u LEFT JOIN department d ON u.departmentId = d.id
+              WHERE
+                  (#{srchType} = 0) OR
+                  (#{srchType} = 1 AND CHARINDEX(#{srchText}, loginId) = 1) OR
+                  (#{srchType} = 2 AND CHARINDEX(#{srchText}, name) = 1) OR
+                  (#{srchType} = 3 AND CHARINDEX(#{srchText}, d.departmentName) = 1) OR
+                  (#{srchType} = 4 AND #{srchText} = userType)
+            ) subquery
+        WHERE 행번호 > (#{currentPage} - 1) * #{pageSize} AND
+              행번호 <= #{currentPage} * #{pageSize}
+        ORDER BY 행번호
+        ]]>
+    </select>
+
+    <select id="selectCount" resultType="int">
+        SELECT COUNT(*)
+        FROM [User] u LEFT JOIN department d ON u.departmentId = d.id
+        WHERE
+            (#{srchType} = 0) OR
+            (#{srchType} = 1 AND CHARINDEX(#{srchText}, loginId) = 1) OR
+            (#{srchType} = 2 AND CHARINDEX(#{srchText}, name) = 1) OR
+            (#{srchType} = 3 AND CHARINDEX(#{srchText}, d.departmentName) = 1) OR
+            (#{srchType} = 4 AND #{srchText} = userType)
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="id">
+        INSERT [User] (loginId, passwd, name, email, userType, departmentId)
+        VALUES (#{loginId}, #{passwd}, #{name}, #{email#}, #{userType}, #{departmentId})
+    </insert>
+
+    <update id="update">
+        UPDATE [User] SET
+            loginId = #{loginId},
+            name = #{name},
+            email = #{email},
+            userType = #{userType},
+            departmentId = #{departmentId}
+        WHERE id = #{id}
+    </update>
+
+    <delete id="delete">
+        DELETE FROM [User] WHERE id = #{id}
+    </delete>
+
+</mapper>

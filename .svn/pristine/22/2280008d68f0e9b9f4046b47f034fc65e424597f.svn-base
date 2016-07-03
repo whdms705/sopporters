@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/security/tags" prefix="sec" %>
+
+<aside id="sidebar" class="column-left">
+
+			<header>
+				<h1><a href="#">후원회</a></h1>
+			</header>
+
+			<nav id="mainnav">
+  				<ul>
+                      <li class="selected-item"><a href="#">Home</a></li>
+                      <li><a href="#">회원관리</a></li>
+                      <li><a href="#">약정관리</a></li>
+                      <li><a href="#">납입관리</a></li>
+                </ul>
+			</nav>
+
+			
+			
+</aside>

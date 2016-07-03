@@ -1,0 +1,240 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/security/tags"
+	prefix="sec"%>
+
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<h4>EB22 불능확인</h4>
+	</div>
+	<!-- /.panel-heading -->
+
+
+	<div class="panel-body">
+		<div class="table-responsive">
+			<table class="table table-bordered" id="table_s">
+				<thead>
+					<tr>
+						<th>불능코드</th>
+						<th>예금주</th>
+						<th>예금주주민번호</th>
+						<th>은행</th>
+						<th>계좌번호</th>
+						<th>출연일</th>
+						<th>약정구좌</th>
+						<th>약정액</th>
+						<th>완료일</th>
+						<th>확인</th>
+						<th>기부조건</th>
+						<th>이체신청일</th>
+						<th>이체신청일</th>
+						<th>이체신청일</th>
+						<th>이체신청일</th>
+						<th>이체신청일</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>0014</td>
+						<td>김하나</td>
+						<td>8908271827762</td>
+						<td>신한</td>
+						<td>110-223-43421</td>
+						<td>20160510</td>
+						<td>110-223-43421</td>
+						<td>30,000</td>
+						<td>20170531</td>
+						<td></td>
+						<td>장학금</td>
+						<td>20160511</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>0014</td>
+						<td>김하나</td>
+						<td>8908271827762</td>
+						<td>신한</td>
+						<td>110-223-43421</td>
+						<td>20160510</td>
+						<td>110-223-43421</td>
+						<td>30,000</td>
+						<td>20170531</td>
+						<td></td>
+						<td>장학금</td>
+						<td>20160511</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>0014</td>
+						<td>김하나</td>
+						<td>8908271827762</td>
+						<td>신한</td>
+						<td>110-223-43421</td>
+						<td>20160510</td>
+						<td>110-223-43421</td>
+						<td>30,000</td>
+						<td>20170531</td>
+						<td></td>
+						<td>장학금</td>
+						<td>20160511</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>0014</td>
+						<td>김하나</td>
+						<td>8908271827762</td>
+						<td>신한</td>
+						<td>110-223-43421</td>
+						<td>20160510</td>
+						<td>110-223-43421</td>
+						<td>30,000</td>
+						<td>20170531</td>
+						<td></td>
+						<td>장학금</td>
+						<td>20160511</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>0014</td>
+						<td>김하나</td>
+						<td>8908271827762</td>
+						<td>신한</td>
+						<td>110-223-43421</td>
+						<td>20160510</td>
+						<td>110-223-43421</td>
+						<td>30,000</td>
+						<td>20170531</td>
+						<td></td>
+						<td>장학금</td>
+						<td>20160511</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>0014</td>
+						<td>김하나</td>
+						<td>8908271827762</td>
+						<td>신한</td>
+						<td>110-223-43421</td>
+						<td>20160510</td>
+						<td>110-223-43421</td>
+						<td>30,000</td>
+						<td>20170531</td>
+						<td></td>
+						<td>장학금</td>
+						<td>20160511</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>0014</td>
+						<td>김하나</td>
+						<td>8908271827762</td>
+						<td>신한</td>
+						<td>110-223-43421</td>
+						<td>20160510</td>
+						<td>110-223-43421</td>
+						<td>30,000</td>
+						<td>20170531</td>
+						<td></td>
+						<td>장학금</td>
+						<td>20160511</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>0014</td>
+						<td>김하나</td>
+						<td>8908271827762</td>
+						<td>신한</td>
+						<td>110-223-43421</td>
+						<td>20160510</td>
+						<td>110-223-43421</td>
+						<td>30,000</td>
+						<td>20170531</td>
+						<td></td>
+						<td>장학금</td>
+						<td>20160511</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+						<tr>
+						<td>0014</td>
+						<td>김하나</td>
+						<td>8908271827762</td>
+						<td>신한</td>
+						<td>110-223-43421</td>
+						<td>20160510</td>
+						<td>110-223-43421</td>
+						<td>30,000</td>
+						<td>20170531</td>
+						<td></td>
+						<td>장학금</td>
+						<td>20160511</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+						<tr>
+						<td>0014</td>
+						<td>김하나</td>
+						<td>8908271827762</td>
+						<td>신한</td>
+						<td>110-223-43421</td>
+						<td>20160510</td>
+						<td>110-223-43421</td>
+						<td>30,000</td>
+						<td>20170531</td>
+						<td></td>
+						<td>장학금</td>
+						<td>20160511</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					
+				</tbody>
+			</table>
+
+		</div>
+		
+		<!-- Pagination -->
+			<div class="row text-center">
+				<div class="col-lg-12">
+					<ul class="pagination">
+						<li><a href="#">&laquo;</a></li>
+						<li class="active"><a href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">4</a></li>
+						<li><a href="#">5</a></li>
+						<li><a href="#">&raquo;</a></li>
+					</ul>
+				</div>
+			</div>
+
+	</div>
+</div>
