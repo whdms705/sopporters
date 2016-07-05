@@ -64,6 +64,13 @@ public class HomeController {
         return "certificate/supervision_cer";
     }
     
+    @RequestMapping(value="/receipt/receipt_issue.do", method=RequestMethod.GET)
+    	public String receipt_issue(Model model){
+    	return "receipt/receipt_issue";
+    }
+    
+    
+    
 
 
 }
