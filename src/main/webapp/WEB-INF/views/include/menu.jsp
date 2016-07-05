@@ -106,10 +106,6 @@
                         </ul>
                     </li>
                     
-                    <li>
-                    	<a href="${R}online/give_a.do">후원하기</a>
-                    </li>
-                    
                      
                 </ul>
             </div>

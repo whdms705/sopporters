@@ -115,7 +115,7 @@
 	</div>
 </div>
 <!-- Modal -->
-<div id="addressmail" class="modal fade" role="dialog">
+<div id="#addressmail" class="modal fade" role="dialog">
 	<div class="modal-dialog-sns">
 
 		<!-- Modal content-->

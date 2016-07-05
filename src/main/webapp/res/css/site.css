@@ -51,7 +51,6 @@ table {
 
 th, td {
    padding: 5px 5px;
-   
 }
 
 th {
@@ -64,12 +63,11 @@ tr {
 }
 
 td {
-   border: 1px solid #ddd;
+   border-bottom: 1px solid #ddd;
 }
 
 #table_a {
-	font-weight:500;
-   background-color: #f8f8f8;
+   background-color: #f1f1f1;
    width: 15%;
    text-align: center;
 }
@@ -78,54 +76,18 @@ td {
    width: 30%;
    padding-left: 10px;
 }
-/*-- 온라인 약정 페이지 테이블 -- */
-#table_p{
-		width:800px;
-	   text-align: center;
-	   font-size:15pt;
-	   color:#fff;
-	   background-color:#4e82c0;  
-}
-#table_h{
-		font-weight:500;
-	   text-align: center;
-	   font-size:15pt;
-	   color:#f8f8f8;
-	   background-color:#4e82c0;  
-}
-
-#table_o {
-   background-color: #f1f1f1;
-   text-align: center;
-   font-weight:bold;
-}
-
 
 /*-- input 크기 변경 -- */
 #input_s {
    width: 80px;
-   margin:3px;
 }
 
 #input_m {
    width: 140px;
-    margin:3px;
 }
 
 #input_l {
    width: 250px;
-    margin:3px;
-}
-
-
-#input_xl {
-   width: 800px;
-    margin:3px;
-}
-
-/*-- 검색창 -- */
-#search{
-	margin:5px 0 10px 0;
 }
 
 /*-- 주소검색버튼 -- */
@@ -244,26 +206,6 @@ a.button-reversed:hover {
    background-color: #222;
    color: #FFFFFF;
 }
-
-a.p_button {
-   background-color: #4e82c0;
-   font-size:15pt;
-   border-radius: 5px;
-   color: #fff;
-   display: inline-block;
-   font-weight: bold;
-   padding: 15px 34px;
-   letter-spacing: 0.25px;
-   text-decoration: none;
-   text-transform: uppercase;
-   margin: 100px 15px 50px 15px;
-}
-
-a.p_button:hover {
-   color: #eaeaea;
-   text-decoration: none;
-}
-
 
 a {
    color: #222;
@@ -861,183 +803,3 @@ input#mailname {
     border-top: 1px sol;
 
 }
-/****** 온라인약정 *****/
-#online_h{	
-	  color:#33364F;
-	  padding: 5px 5px 10px 5px;
-	  font-weight:bold;
-	  text-align:center;
-}
-
-.bank{
-	font-weight:bold;
-	font-size:12pt;
-	
-}
-
-
-
-
-/****** 개인정보 *****/
-
-
-.pinfo_line{
-	 border: 2px solid #e9eaec;
-	  background-color: #fdfdfd;
-	  padding:10px;
-	  margin-bottom:15px;
-}
-
-.pinfo > tbody > tr,td {
-   border: 0px;
-}
-
-.pinfo_a{
-	color:#ff0000;
-	font-weight:400;
-	font-size:11pt;
-}
-
-.pinfo_h{
-	color:#4e82c0;
-	font-weight:bold;
-	font-size:20pt;
-}
-/***********************후원하기**********************************************/
-.skhugive {
-	border: 2px solid #e9eaec;
-	width: 928px;
-	height: 200px;
-	margin: 0px 0px 10px 0px;
-}
-
-.skhugive .b {
-	width: 900px;
-	padding: 50px 0px 0px 310px;
-	font-size: 11px !important;
-	color: #91756b;
-	line-height: 16px;
-	letter-spacing: -0.01em;
-}
-
-.skhugive .t {
-	float: left;
-	width: 230px;
-	height: 160px;
-	    margin: 15px 0px 0px 90px;
-}
-
-.skhugive .k {
-	z-index: 11;
-	width: 750px;
-	height: 19px;
-	padding: 20px 25px;
-	font-size: 17px;
-	color: #031e57;
-	line-height: 26px;
-	letter-spacing: -0.08em;
-	/* float: left; */
-	margin: 20px 0px 0px 320px;
-}
-
-.skhugive {
-	background: url(/pro1/res/images/bbk.png)
-		no-repeat left top;
-}
-
-.b>li, ol {
-	list-style: none;
-}
-/***********************후원하기-전화*****************************************************/
-#tels_txt {
-	width: 637px;
-	height: 133px;
-}
-
-.t001 {
-	font-size: 23px;
-	color: #b49b70;
-	letter-spacing: -0.08em;
-	font-weight: bold;
-	float: left;
-	width: 200px;
-	height: 70px;
-	text-align: center;
-	margin-top: 30px;
-}
-
-.t001s {
-	font-size: 17px;
-	color: gray;
-	letter-spacing: -0.08em;
-	text-align: center;
-	margin-top: 15px;
-}
-
-.t002 {
-	font-size: 13px;
-	color: #8d8686;
-	letter-spacing: -0.08em;
-	margin: 5px 0px 0px 0px;
-}
-
-.imgon {
-	width: 260px;
-	height: 60px;
-	text-align: center;
-	/* padding: 5px; */
-	margin: 28px 0px 0px 0px;
-}
-
-.imgon1 {
-	width: 128px;
-	height: 60px;
-	margin: 28px 0px 0px 0px;
-	text-align: center;
-}
-
-.t003 {
-	font-size: 14px;
-	color: #000000;
-	line-height: 22px;
-	letter-spacing: -0.08em;
-	text-align: center;
-	float: left;
-	margin: 10px 0px 0px 55px;
-}
-
-.tels {
-	float: left;
-}
-
-.t003a {
-	font-size: 14px;
-	color: #000000;
-	line-height: 22px;
-	letter-spacing: -0.08em;
-	text-align: center;
-	float: left;
-	margin: 35px 0px 0px 70px;
-}
-
-.t004 {
-	font-size: 13px;
-	color: #5e5b5b;
-	line-height: 17px;
-	letter-spacing: -0.03em;
-	text-align: center;
-	margin: 30px 15px 0px 15px;
-	float: left;
-}
-
-
-.t005 {
-	font-size: 13px;
-	color: #5e5b5b;
-	line-height: 17px;
-	letter-spacing: -0.03em;
-	text-align: center;
-	margin: 15px 15px 10px 15px;
-	float: left;
-}
-

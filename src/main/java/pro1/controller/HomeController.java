@@ -64,19 +64,6 @@ public class HomeController {
         return "certificate/supervision_cer";
     }
     
-    @RequestMapping(value="/online/online.do", method=RequestMethod.GET)
-    public String online(Model model) {
-        return "online/online";
-    }
-    
-    @RequestMapping(value="/online/pinfo.do", method=RequestMethod.GET)
-    public String pinfo(Model model) {
-        return "online/pinfo";
-    }
-    @RequestMapping(value="/online/give_a.do", method=RequestMethod.GET)
-    public String give_a(Model model) {
-        return "online/give_a";
-    }
 
 
 }
