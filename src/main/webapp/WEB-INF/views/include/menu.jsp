@@ -105,10 +105,9 @@
                             </li>
                         </ul>
                     </li>
-                    
-                    <li>
-                    	<a href="${R}online/give_a.do">후원하기</a>
-                    </li>
+                     <li>
+	                        <a href="${R}receipt/receipt_issue.do"> 기부금 영수증 발급대장</a>
+	                </li>
                     
                      
                 </ul>

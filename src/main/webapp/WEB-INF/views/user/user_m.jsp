@@ -6,6 +6,21 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 
+<script>
+	$(function() {
+		$("tbody tr").click(function() {
+			location.href = $(this).attr("data-url");
+		});
+		$("ul.pagination a").click(function() {
+			$("input[name=pg]").val($(this).attr("data-page"));
+			$("form").submit();
+		});
+		$("[data-auto-submit=true]").change(function() {
+			$(this).parents("form").submit();
+		});
+	});
+</script>
+
 
 <div id="wrapper">
 	<div id="page-wrapper">
@@ -16,124 +31,84 @@
 					class="button">엑셀</a> <a href="#" class="button">인쇄</a>
 			</div>
 
-			<div id="search">
-				<div class="column-right">
-					<select name="search" id="search" class="msize">
-						<option selected="selected" value="검색조건">검색조건</option>
-						<option value="0">회원번호</option>
-						<option value="1">회원명</option>
-						<option value="2">회원구분</option>
-						<option value="3">소속</option>
-						<option value="4">가입구분</option>
-						<option value="5">핸드폰</option>
-						<option value="6">이메일</option>
-					</select> <input type="search" id="search_a" name="search_a">
+			<form:form method="get" modelAttribute="pagination"
+				class="pagination">
+				<input type="hidden" name="pg" value="1" />
+
+				<div class="form-inline">
+					<span>정렬:</span>
+					<form:select path="od" data-auto-submit="true">
+						<form:option value="0" label="회원번호순서" />
+						<form:option value="1" label="이름순서" />
+					</form:select>
+
+					<form:select path="ss">
+						<form:option value="0" label="검색조건" />
+						<form:option value="1" label="회원번호" />
+						<form:option value="2" label="이름" />
+					</form:select>
+					<form:input path="st" />
 					<button type="submit" class="btn btn-small">검색</button>
+					<c:if test="${ pagination.ss != 0 }">
+						<a href="user_n.do" class="btn btn-small">취소</a>
+					</c:if>
 				</div>
-			</div>
+
+				<table class="table table-bordered">
+					<thead>
+						<tr>
+							<th>회원번호</th>
+							<th>이름</th>
+							<th>주민등록번호</th>
+							<th>회원구분</th>
+							<th>소속</th>
+							<th>가입구분</th>
+							<th>가입일자</th>
+							<th>납입액</th>
+							<th>연락처</th>
+							<th>이메일</th>
+							<th>비고</th>
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach var="member" items="${ user_m }">
+							<tr>
+								<td>${ member.memberId }</td>
+								<td>${ member.name }</td>
+								<td>${ member.ssn }</td>
+								<td>${ member.memberType }</td>
+								<td>${ member.church }</td>
+								<td>${ member.joinType }</td>
+								<td>${ member.joinDate }</td>
+								<td>${ member.payment }</td>
+								<td>${ member.phoneNumber }</td>
+								<td>${ member.email }</td>
+								<td>${ member.note }</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
 
 
-			<table class="table table-bordered table-hover">
-				<thead>
-					<tr>
-						<th>회원번호</th>
-						<th>회원명</th>
-						<th>주민번호</th>
-						<th>회원구분</th>
-						<th>소속</th>
-						<th>가입구분</th>
-						<th>가입일자</th>
-						<th>납입액</th>
-						<th>핸드폰</th>
-						<th>이메일</th>
-						<th>비고</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>201605-0001</td>
-						<td>김하나</td>
-						<td>830203-2032932</td>
-						<td>직원</td>
-						<td>OO교회</td>
-						<td>개인</td>
-						<td>2016.05.02</td>
-						<td>30,000</td>
-						<td>010-3042-3402</td>
-						<td>sjdki@daum.net</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>201605-0002</td>
-						<td>박둘</td>
-						<td>610601-14323432</td>
-						<td>동문</td>
-						<td></td>
-						<td>기업</td>
-						<td>2016.05.03</td>
-						<td>100,000</td>
-						<td>010-1203-8301</td>
-						<td>shdguq@daum.net</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>201605-0003</td>
-						<td>강셋</td>
-						<td>710601-2918210</td>
-						<td>학부모</td>
-						<td>00교회</td>
-						<td>가족</td>
-						<td>2016.05.06</td>
-						<td>50,000</td>
-						<td>010-2425-5743</td>
-						<td>sjdfj@naver.com</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>201605-0004</td>
-						<td>송넷</td>
-						<td>910601-1202902</td>
-						<td>동문</td>
-						<td></td>
-						<td>개인</td>
-						<td>2016.05.08</td>
-						<td>20,000</td>
-						<td>010-1023-1821</td>
-						<td>giewm@daum.net</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>201605-0005</td>
-						<td>신다섯</td>
-						<td>730402-2193942</td>
-						<td>기타</td>
-						<td>00교회</td>
-						<td>단체</td>
-						<td>2016.05.12</td>
-						<td>100,000</td>
-						<td>010-2832-1921</td>
-						<td>sjdkfw@daum.net</td>
-						<td></td>
-					</tr>
-				</tbody>
-			</table>
-
-
-			<!-- Pagination -->
-			<div class="row text-center">
-				<div class="col-lg-12">
-					<ul class="pagination">
-						<li><a href="#">&laquo;</a></li>
-						<li class="active"><a href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">4</a></li>
-						<li><a href="#">5</a></li>
-						<li><a href="#">&raquo;</a></li>
-					</ul>
+				<div class="row text-center">
+					<div class="col-lg-12">
+						<div>
+							<ul class="pagination">
+								<c:forEach var="page" items="${ pagination.pageList }">
+									<li class='${ page.cssClass }'><a
+										data-page="${ page.number }">${ page.label }</a></li>
+								</c:forEach>
+							</ul>
+						</div>
+					</div>
 				</div>
-			</div>
+	
 
+
+
+
+
+			</form:form>
 
 
 
