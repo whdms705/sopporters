@@ -63,7 +63,10 @@ public class HomeController {
     public String supervision_cer(Model model) {
         return "certificate/supervision_cer";
     }
-    
+    @RequestMapping(value="/receipt/receipt_issue.do", method=RequestMethod.GET)
+        	public String receipt_issue(Model model){
+        	return "receipt/receipt_issue";
+        }
     @RequestMapping(value="/online/online.do", method=RequestMethod.GET)
     public String online(Model model) {
         return "online/online";
