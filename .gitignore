@@ -1,1 +1,7 @@
 pom.properties
+.settings/*
+.svn/*
+target/*
+.git/*
+.project
+.classpath
