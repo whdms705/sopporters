@@ -1,4 +1,3 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
  	pageEncoding="UTF-8"%>
  <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -8,7 +7,7 @@
  <title>Insert title here</title>
  </head>
  <body>
- 	<div id="wrapper">
+ <div id="wrapper">
  		<div class="container-fluid">
  
  			<!-- Page Heading -->
@@ -19,7 +18,7 @@
  			</div>
  
  			<div class="row">
- 				<div class="col-lg-12">
+ 			<div class="col-lg-12">
  					<form name="chkform" method="post" action="">
  						<div class="table-responsive">
  							<table class="table table-bordered table-hover" id="table_s">
@@ -38,13 +37,13 @@
  								</thead>
  								<tbody>
  								
-								</tbody>
+ 								</tbody>
  							</table>
  						</div>
  					</form>
- 				</div>
- 
  			</div>
+ 
+ 		</div>
  		</div>
  	</div>
  </body>
