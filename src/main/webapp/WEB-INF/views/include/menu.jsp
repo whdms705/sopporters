@@ -62,7 +62,9 @@
 					</li>
 					<li><a href="${R}certificate/donamtion_cer.do">기부증서</a></li>
 					<li><a href="${R}certificate/supervision_cer.do">장학증서</a></li>
-					<li><a href="${R}receipt/receipt_issue.do"> 기부금 영수증 발급대장</a></li>
+					<li><a href="${R}receipt/receipt_issue.do"> 기부금 영수증 발급대장</a>
+						
+					</li>
 
 				</ul></li>
 
